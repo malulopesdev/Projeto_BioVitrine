@@ -1,0 +1,282 @@
+/* Redefinir estilos padrão */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* Barra Superior */
+.top-bar {
+    background: #f4c3b7; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+}
+.top-bar a {
+    font-weight: bold; /* Negrito */
+    color: #000; /* Cor do texto */
+}
+
+/* Cabeçalho */
+header {
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço entre logo e menu */
+    align-items: center; /* Alinha verticalmente */
+    padding: 15px 40px; /* Espaçamento interno */
+    background: #0d3b3d; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+}
+header nav a {
+    margin: 0 15px; /* Espaço entre links */
+    text-decoration: none; /* Remove sublinhado */
+    color: #fff; /* Cor do texto */
+}
+header .icons {
+    display: flex; /* Layout horizontal */
+    align-items: center; /* Centraliza verticalmente */
+}
+header input {
+    padding: 5px; /* Espaçamento interno do input */
+    margin-right: 10px; /* Distância do botão */
+}
+
+/* Seção Home */
+.hero {
+    display: flex; /* Layout horizontal */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaço entre texto e imagem */
+    padding: 50px; /* Espaçamento interno */
+    background: #0d3b3d; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+}
+.hero button {
+    margin-top: 15px; /* Distância do texto */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background: #fff; /* Cor de fundo */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Muda cursor ao passar o mouse */
+    font-weight: bold; /* Negrito */
+}
+
+/* Seção Sobre */
+.sobre {
+    background-color: #fdfdfd; /* Fundo claro */
+    padding: 3rem 1rem; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+.sobre h2 {
+    font-size: 2rem; /* Tamanho do título */
+    color: #0d3b3d; /* Cor do título */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+}
+.sobre h2::after {
+    content: ""; /* Linha decorativa */
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0d3b3d;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+.sobre p {
+    max-width: 800px; /* Largura máxima do texto */
+    margin: 0 auto 2rem auto; /* Centraliza e espaço abaixo */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+.sobre-cards {
+    display: grid; /* Layout em grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas responsivas */
+    gap: 1.5rem; /* Espaço entre cards */
+    margin-top: 2rem; /* Espaço acima */
+}
+.card {
+    background: #ffffff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 1.5rem; /* Espaço interno */
+    border: 1px solid #e0e0e0; /* Borda fina */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05); /* Sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animação hover */
+}
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Sombra maior */
+}
+.card h3 {
+    color: #0d3b3d; /* Cor do título */
+    margin-bottom: 0.8rem; /* Espaço abaixo */
+    font-size: 1.2rem; /* Tamanho do título */
+}
+
+/* Seção Produtos */
+.products h2 {
+    text-align: center; /* Centraliza título */
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaço abaixo */
+    color: #0d3b3d; /* Cor do título */
+    position: relative; /* Para pseudo-elementos */
+}
+.products h2::after {
+    content: ""; /* Linha decorativa */
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0d3b3d;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+.product-list {
+    display: grid; /* Layout em grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas responsivas */
+    gap: 30px; /* Espaço entre cards */
+    margin: 40px auto; /* Espaço acima e centraliza */
+    max-width: 1000px; /* Largura máxima */
+    justify-items: center; /* Centraliza os cards */
+}
+.product-card {
+    background: #f9f9f9; /* Fundo claro */
+    padding: 20px; /* Espaço interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza conteúdo */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* Sombra leve */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animação hover */
+}
+.product-card:hover {
+    transform: translateY(-5px); /* Levanta o card */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Sombra maior */
+}
+.product-card button {
+    margin-top: 10px; /* Espaço acima */
+    padding: 8px 15px; /* Espaço interno */
+    background: #0d3b3d; /* Cor do botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor pointer */
+}
+
+/* Botão Produtos principal */
+.btn-produtos {
+    display: inline-block; /* Botão como bloco inline */
+    margin-top: 15px; /* Espaço acima */
+    padding: 10px 20px; /* Espaço interno */
+    background: #fff; /* Cor do fundo */
+    color: #0d3b3d; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Negrito */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Cursor pointer */
+    transition: background 0.3s ease, color 0.3s ease; /* Animação hover */
+}
+.btn-produtos:hover {
+    background: #0d3b3d; /* Fundo hover */
+    color: #fff; /* Texto hover */
+}
+
+/* Seção Cadastro */
+.cadastro {
+    padding: 60px 20px; /* Espaçamento interno */
+    background: #eaf5ea; /* Fundo verde claro */
+    text-align: center; /* Centraliza conteúdo */
+}
+.cadastro h2 {
+    font-size: 28px; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaço abaixo */
+    color: #0d3b3d; /* Cor do título */
+}
+.cadastro p {
+    margin-bottom: 20px; /* Espaço abaixo */
+    font-size: 16px; /* Tamanho do texto */
+    color: #333; /* Cor do texto */
+}
+.cadastro form {
+    max-width: 400px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza */
+    text-align: left; /* Alinha à esquerda */
+}
+.cadastro input {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaço interno */
+    margin-bottom: 15px; /* Espaço abaixo */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+.cadastro button {
+    width: 100%; /* Largura total */
+    padding: 12px; /* Espaço interno */
+    background: #0d3b3d; /* Cor do botão */
+    color: #fff; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Cursor pointer */
+}
+.cadastro button:hover {
+    background: #145f63; /* Cor hover */
+}
+
+/* Rodapé */
+footer {
+    text-align: center; /* Centraliza texto */
+    background: #f1f1f1; /* Fundo cinza */
+    padding: 1.2rem; /* Espaço interno */
+    margin-top: 2rem; /* Espaço acima */
+    font-size: 0.9rem; /* Tamanho da fonte */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fixa na tela */
+    z-index: 1000; /* Sobre outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Rolagem se necessário */
+    background-color: rgba(0,0,0,0.6); /* Fundo semi-transparente */
+    transition: opacity 0.3s ease; /* Animação */
+}
+.modal-content {
+    background-color: #fdfdfd; /* Fundo branco */
+    margin: 10% auto; /* Centraliza verticalmente */
+    padding: 30px 20px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    width: 90%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima */
+    text-align: center; /* Centraliza conteúdo */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* Sombra */
+    animation: slideDown 0.3s ease; /* Animação de entrada */
+}
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.close {
+    color: #0d3b3d; /* Cor do X */
+    float: right; /* Alinha à direita */
+    font-size: 28px; /* Tamanho */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor pointer */
+}
+.close:hover {
+    color: #f4c3b7; /* Cor hover */
+}
+#marcas-list {
+    list-style: none; /* Remove marcadores */
+    margin-top: 20px; /* Espaço acima */
+    padding: 0; /* Remove padding */
+}
+#marcas-list li {
+    background: #0d3b3d; /* Fundo das marcas */
+    color: #fff; /* Texto branco */
+    margin: 10px 0; /* Espaço entre itens */
+    padding: 10px; /* Espaço interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.2s ease, background 0.2s ease; /* Animação hover */
+    cursor: default; /* Cursor padrão */
+}
+#marcas-list li:hover {
+    background: #145f63; /* Cor hover */
+    transform: translateX(5px); /* Move levemente */
+}
