@@ -1,0 +1,204 @@
+/* base.css - Arquivo BASE (Geral para todas as páginas) */
+
+/* ========================================= */
+/* 1. CONFIGURAÇÕES GLOBAIS E ESTRUTURA BASE */
+/* ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* FIX: GARANTE RODAPÉ NO FIM DA PÁGINA (Sticky Footer) */
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ========================================= */
+/* 2. HEADER E FOOTER */
+/* ========================================= */
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #0d3b3d;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+header nav a:hover {
+    color: #f4c3b7;
+}
+
+/* Estado de link ativo */
+header nav a.active {
+    color: #f4c3b7; 
+    font-weight: bold;
+}
+
+/* Ícones */
+header .icons {
+    display: flex;
+    align-items: center;
+}
+header .icons input {
+    padding: 5px 10px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    max-width: 150px;
+}
+header .icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+header .icons a:hover {
+    color: #f4c3b7;
+}
+
+/* Rodapé */
+footer {
+    padding: 15px 0;
+    background: #0d3b3d;
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* ========================================= */
+/* 3. ESTILOS GERAIS DE MODAIS */
+/* ========================================= */
+/* O Modal (Fundo) */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; 
+    z-index: 1000; /* Fica no topo de tudo */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Permite scroll se necessário */
+    background-color: rgba(0,0,0,0.4); /* Fundo semi-transparente */
+}
+
+/* Conteúdo do Modal (Marcas) */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza verticalmente e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    /* Garante que o texto dentro do modal seja escuro por padrão */
+    color: #333; 
+}
+
+/* Botão de Fechar do Modal de Marcas */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover {
+    color: #f4c3b7;
+}
+
+/* --- Modal do Carrinho (Usado em todas as páginas) --- */
+.modal-content-carrinho {
+    background-color: #fff;
+    margin: 3% auto 0; 
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    animation: slideDown 0.3s ease;
+    text-align: center;
+}
+.carrinho-titulo {
+    color: #0d3b3d;
+    border-bottom: 2px solid #f4c3b7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.close-carrinho {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-carrinho:hover {
+    color: #f4c3b7;
+}
+
+.btn-continuar-comprando {
+    background-color: #f4c3b7;
+    color: #0d3b3d;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.btn-continuar-comprando:hover {
+    background-color: #e6b2a5;
+}
+
+/* Animação para o modal do carrinho */
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0}
+    to {transform: translateY(0); opacity: 1}
+}
+
+/* MEDIA QUERIES GERAIS */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+    }
+    header nav {
+        margin: 10px 0;
+    }
+    header .icons {
+        justify-content: center;
+    }
+    header .icons input {
+        max-width: 100px;
+        margin-right: 10px;
+    }
+}

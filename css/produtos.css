@@ -1,0 +1,121 @@
+/* produtos.css - Estilos específicos para a página Produtos */
+
+/* FIX: Faz a seção crescer e empurrar o rodapé para baixo */
+.products {
+    flex-grow: 1; 
+    padding: 60px 20px;
+    background-color: #f7fcf7; /* Fundo suave para a seção */
+}
+.products h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0d3b3d;
+    position: relative;
+}
+.products h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0d3b3d;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1000px;
+    justify-items: center;
+}
+.product-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.product-card h3 {
+    color: #0d3b3d;
+    margin-bottom: 15px;
+}
+.product-card button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #0d3b3d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.product-card button:hover {
+    background: #f4c3b7;
+    color: #0d3b3d;
+}
+
+
+/* --- Estilos para o Modal de Marcas (Legibilidade Garantida) --- */
+
+#modal-marcas .modal-content h3 {
+    color: #0d3b3d; 
+}
+
+/* Estilos de lista do modal */
+#marcas-list {
+    list-style: none; 
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#marcas-list li {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Linha separadora sutil */
+    /* Remove a cor de fundo forçada do base.css */
+    background: transparent; 
+    padding: 0;
+}
+#marcas-list li:hover {
+    /* Remove o efeito de hover que estava no base.css */
+    transform: none; 
+}
+
+/* Estilo do link (Nome da Marca) - AGORA SERÁ VISÍVEL */
+#marcas-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #0d3b3d; /* Cor principal escura para garantir a leitura */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+#marcas-list a:hover {
+    color: #f4c3b7; 
+}
+
+/* Estilo da descrição (O que é/O que faz) */
+.marca-descricao {
+    display: block;
+    font-size: 0.9rem;
+    color: #555; /* Cor cinza escuro para a descrição */
+    margin-top: 5px;
+}
+
+/* Ícone de link externo (o small icon de seta) */
+.fa-arrow-up-right-from-square {
+    font-size: 0.8rem;
+    margin-left: 10px;
+}

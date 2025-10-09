@@ -1,0 +1,44 @@
+/* cadastro.css - Estilos específicos para a página Cadastro */
+
+/* FIX: Faz a seção crescer e empurrar o rodapé para baixo */
+.cadastro {
+    flex-grow: 1; 
+    padding: 60px 20px;
+    background: #eaf5ea;
+    text-align: center;
+}
+.cadastro h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #0d3b3d;
+}
+.cadastro p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+.cadastro form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+.cadastro input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.cadastro button {
+    width: 100%;
+    padding: 12px;
+    background: #0d3b3d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.cadastro button:hover {
+    background: #459ba0;
+}

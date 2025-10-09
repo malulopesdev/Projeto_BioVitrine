@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioVitrine - Sobre</title>
+    
+        <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sobre.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BioVitrine</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+        <div class="icons">
+            <input type="text" placeholder="Pesquise...">
+            
+            <a href="cadastro.html" title="Cadastro/Perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            
+            <a href="#" title="Carrinho de Compras">
+                <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+    
+    <div id="modal-carrinho" class="modal">
+        <div class="modal-content-carrinho">
+            <span class="close-carrinho">&times;</span>
+            <h3 class="carrinho-titulo">Meu Carrinho</h3>
+            
+            <div id="carrinho-itens">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            
+            <button class="btn-continuar-comprando">Continuar comprando</button>
+        </div>
+    </div>
+
+    <section class="sobre" id="sobre">
+        <h2>Sobre a BioVitrine</h2>
+        <p>
+            Acreditamos que cuidar de si também é cuidar do mundo. Nosso projeto nasceu da vontade de transformar a forma como consumimos cosméticos, dando visibilidade a marcas que produzem de maneira consciente, sem agredir o meio ambiente ou explorar animais.
+        </p>
+        <div class="sobre-cards">
+            <div class="card">
+                <h3>Missão</h3>
+                <p>Conectar pessoas a cosméticos sustentáveis, promovendo escolhas conscientes e respeitando a natureza.</p>
+            </div>
+            <div class="card">
+                <h3>Visão</h3>
+                <p>Ser referência em cosméticos ecológicos, inspirando consumo responsável e transformador no Brasil.</p>
+            </div>
+            <div class="card">
+                <h3>Valores</h3>
+                <p>Sustentabilidade, ética, transparência, inovação, respeito à vida e compromisso ambiental.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BioVitrine - Todos os direitos reservados</p>
+    </footer>
+    
+        <script src="js/script.js"></script>
+</body>
+</html>

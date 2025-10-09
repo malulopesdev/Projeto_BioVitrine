@@ -1,0 +1,81 @@
+/* sobre.css - Estilos específicos para a página Sobre */
+
+/* FIX: Faz a seção crescer e empurrar o rodapé para baixo */
+.sobre {
+    flex-grow: 1; 
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative; /* Necessário para posicionar o overlay */
+
+    /* --- ESTILOS DA IMAGEM DE FUNDO CORRIGIDOS --- */
+    background-image: url('imagens/fundo.jpeg'); /* Caminho corrigido */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    /* --- FIM DOS ESTILOS DE FUNDO --- */
+}
+
+/* OVERLAY: Adiciona uma camada sutil por cima da imagem para melhorar a legibilidade */
+.sobre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Camada branca com 40% de transparência para clarear o fundo */
+    background-color: rgba(255, 255, 255, 0.4); 
+    z-index: 0; /* Coloca o overlay atrás do conteúdo */
+}
+
+/* Garante que o conteúdo e os cards fiquem por cima do overlay */
+.sobre > * {
+    position: relative;
+    z-index: 1; 
+}
+
+
+.sobre h2 {
+    font-size: 2rem;
+    color: #0d3b3d;
+    margin-bottom: 1rem;
+}
+/* Linha decorativa abaixo do título */
+.sobre h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0d3b3d;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+.sobre p {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    color: #333;
+}
+.sobre-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.card {
+    background: #ffffff; /* Fundo dos cards branco para contraste */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.card h3 {
+    color: #0d3b3d;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}

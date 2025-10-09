@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioVitrine - Produtos</title>
+
+        <link rel="stylesheet" href="css/base.css"> 
+    <link rel="stylesheet" href="css/produtos.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BioVitrine</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html" class="active">Produtos</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+        <div class="icons">
+            <input type="text" placeholder="Pesquise...">
+            
+            <a href="cadastro.html" title="Cadastro/Perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            
+            <a href="#" id="open-carrinho" title="Carrinho de Compras">
+                <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+
+    <div id="modal-carrinho" class="modal">
+        <div class="modal-content-carrinho">
+            <span class="close-carrinho">&times;</span>
+            <h3 class="carrinho-titulo">Meu Carrinho</h3>
+            
+            <div id="carrinho-itens">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            
+            <button class="btn-continuar-comprando">Continuar comprando</button>
+        </div>
+    </div>
+    
+    <section class="products" id="Produtos">
+        <h2>Produtos Sustentáveis</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <h3>Para Cabelos</h3>
+                <button data-produto="cabelos">VER MARCAS</button>
+            </div>
+            <div class="product-card">
+                <h3>Higiene Íntima</h3>
+                <button data-produto="higiene">VER MARCAS</button>
+            </div>
+            <div class="product-card">
+                <h3>Maquiagem</h3>
+                <button data-produto="maquiagem">VER MARCAS</button>
+            </div>
+            <div class="product-card">
+                <h3>Skincare</h3>
+                <button data-produto="skincare">VER MARCAS</button>
+            </div>
+
+            <div id="modal-marcas" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Marcas Parceiras para <span id="modal-categoria-titulo"></span>:</h3> 
+                    <ul id="marcas-list">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BioVitrine - Todos os direitos reservados</p>
+    </footer>
+    
+        <script src="js/script.js"></script>
+</body>
+</html>

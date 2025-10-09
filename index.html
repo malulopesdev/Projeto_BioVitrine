@@ -1,123 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> <!-- Define codificação de caracteres -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade em dispositivos móveis -->
-    <title>BioVitrine</title> <!-- Título da página -->
-    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioVitrine - Início</title>
+    
+        <link rel="stylesheet" href="css/base.css"> 
+    <link rel="stylesheet" href="css/home.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <!-- Barra Superior -->
-    <div class="top-bar">
-    </div>
-
-    <!-- Cabeçalho -->
     <header>
-        <div class="logo">BioVtrine</div> <!-- Logo do site -->
+        <div class="logo">BioVitrine</div>
         <nav>
-            <!-- Menu de navegação -->
-            <a href="#Home">Home</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#Produtos">Produtos</a>
-            <a href="#cadastro">Cadastro</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="cadastro.html">Cadastro</a>
         </nav>
         <div class="icons">
-            <input type="text" placeholder="Pesquise..."> <!-- Barra de pesquisa -->
+            <input type="text" placeholder="Pesquise...">
+            
+            <a href="cadastro.html" title="Cadastro/Perfil">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            
+            <a href="#" id="open-carrinho" title="Carrinho de Compras">
+                <i class="fa-solid fa-shopping-cart"></i>
+            </a> 
         </div>
     </header>
 
-    <!-- Home -->
-    <section class="hero" id="Home">
-        <div class="hero-text">
-            <h1>Sua beleza em harmonia com a natureza.</h1> <!-- Título principal -->
-            <ul>
-                <!-- Lista de benefícios -->
-                <li>✔ Redução da poluição</li>
-                <li>✔ Combate aos testes em animais</li>
-                <li>✔ Preservação da biodiversidade</li>
-                <li>✔ Consumo mais justo e consciente</li>
-            </ul>
-            <a href="#Produtos" class="btn-produtos">VER PRODUTOS</a> <!-- Botão para produtos -->
+    <div id="modal-carrinho" class="modal">
+        <div class="modal-content-carrinho">
+            <span class="close-carrinho">&times;</span>
+            <h3 class="carrinho-titulo">Meu Carrinho</h3>
+            
+            <div id="carrinho-itens">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            
+            <button class="btn-continuar-comprando">Continuar comprando</button>
         </div>
-    </section>
-
-    <!-- Sobre -->
-    <section id="sobre" class="sobre">
-        <h2>Sobre a BioVitrine</h2> <!-- Título da seção -->
-        <p>
-            Acreditamos que cuidar de si também é cuidar do mundo. Nosso projeto nasceu da vontade de transformar a forma como consumimos cosméticos, dando visibilidade a marcas que produzem de maneira consciente, sem agredir o meio ambiente ou explorar animais.
-        </p>
-        <div class="sobre-cards">
-            <!-- Cards de Missão, Visão e Valores -->
-            <div class="card">
-                <h3>Missão</h3>
-                <p>Conectar pessoas a cosméticos sustentáveis, promovendo escolhas conscientes e respeitando a natureza.</p>
+    </div>
+    
+    <section class="slider-container" id="Home">
+        <div class="slider-wrapper">
+            
+            <div class="slide" data-index="0" style="background-image: url('imagens/cabelo.jpeg');">
+                <div class="slide-content" style="text-align: right;">
+                    <h2 class="slide-title" style="color:#0d3b3d;">Cosméticos Orgânicos</h2>
+                    <a href="produtos.html" class="slide-button" style="background-color:#0d3b3d;">Confira</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>Visão</h3>
-                <p>Ser referência em cosméticos ecológicos, inspirando consumo responsável e transformador no Brasil.</p>
+            
+            <div class="slide" data-index="1" style="background-image: url('imagens/pele.jpeg');">
+                <div class="slide-content" style="text-align: right;">
+                    <h2 class="slide-title" style="color:#0d3b3d;">Beleza Natural</h2>
+                    <a href="produtos.html" class="slide-button" style="background-color:#0d3b3d;">Confira</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>Valores</h3>
-                <p>Sustentabilidade, ética, transparência, inovação, respeito à vida e compromisso ambiental.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Produtos -->
-    <section class="products" id="Produtos">
-        <h2>Produtos Sustentáveis</h2>
-        <div class="product-list">
-            <!-- Cards de categorias de produtos -->
-            <div class="product-card">
-                <h3>Para Cabelos</h3>
-                <button data-produto="cabelos">VER MARCAS</button>
-            </div>
-            <div class="product-card">
-                <h3>Higiene Íntima</h3>
-                <button data-produto="higiene">VER MARCAS</button>
-            </div>
-            <div class="product-card">
-                <h3>Maquiagem</h3>
-                <button data-produto="maquiagem">VER MARCAS</button>
-            </div>
-            <div class="product-card">
-                <h3>Skincare</h3>
-                <button data-produto="skincare">VER MARCAS</button>
+            
+            <div class="slide" data-index="2" style="background-image: url('imagens/make.jpeg');">
+                <div class="slide-content" style="text-align: right;">
+                    <h2 class="slide-title" style="color:#0d3b3d;">Maquiagem Sustentável</h2>
+                    <a href="produtos.html" class="slide-button" style="background-color:#0d3b3d;">Confira</a>
+                </div>
             </div>
 
-            <!-- Modal (janela popup) -->
-            <div id="modal-marcas" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span> <!-- Botão para fechar modal -->
-                    <h3>Marcas Parceiras:</h3>
-                    <ul id="marcas-list"></ul> <!-- Lista de marcas exibida pelo JS -->
+            <div class="slide" data-index="3" style="background-image: url('imagens/absorvente.jpeg');">
+                <div class="slide-content" style="text-align: right;">
+                    <h2 class="slide-title" style="color:#0d3b3d;">Higiene Íntima Consciente</h2>
+                    <a href="produtos.html" class="slide-button" style="background-color:#0d3b3d;">Confira</a>
                 </div>
             </div>
         </div>
+
+        <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+        
+        <div class="slider-dots"></div>
     </section>
 
-    <!-- Seção Cadastro -->
-    <section class="cadastro" id="cadastro">
-        <h2>Cadastro</h2>
-        <p>Cadastre-se para receber novidades sobre novos produtos e marcas parceiras.</p>
-        <form action="#" method="post">
-            <!-- Formulário de cadastro -->
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
-            
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br><br>
-            
-            <button type="submit">Cadastrar</button>
-        </form>
-    </section>
-
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 BioVitrine - Todos os direitos reservados</p>
-    </footer>
-
-    <script src="script.js"></script> <!-- Link para arquivo JS -->
+        <p>&copy; 2025 BioVitrine - Todos os direitos reservados</p>
+    </footer>
+    
+        <script src="js/script.js"></script>
 </body>
 </html>
